@@ -223,7 +223,7 @@ export function leaderboardPage(bounty, lb, { query, page }) {
   return `
     <p class="breadcrumb"><a href="#/">&larr; All bounties</a> · <a href="#/bounty/${encodeURIComponent(bounty.slug)}">${esc(bounty.title)}</a></p>
     <h1>Leaderboard: ${esc(bounty.title)}</h1>
-    <p class="lede">${num(lb.entries.length)} ranked entries · ranked by ${esc(rankKey)}${lb.phase ? ` · ${esc(lb.phase)} phase` : ''}</p>
+    <p class="lede">${num(lb.entries.length)} ranked entries · ranked by ${esc(rankKey)}${lb.phase?.title ? ` · ${esc(lb.phase.title)} phase` : ''}${lb.view ? ` · ${esc(lb.view)} view` : ''}</p>
     <div class="controls">
       <input id="lb-search" type="search" placeholder="Search handle or entry…" value="${esc(query)}" aria-label="Search the leaderboard">
       <span class="result-count">${num(entries.length)} matching</span>
