@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A fast, light frontend for make.fun: live bounties, leaderboards and public profiles, read from make.fun's public API.">
+<title>make.fun bounties</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#/">make<span>.fun</span></a>
+    <nav class="topnav" aria-label="Main">
+      <a href="#/" data-nav="board">Bounties</a>
+    </nav>
+    <form id="profile-search" class="profile-search" role="search">
+      <label class="visually-hidden" for="handle-input">Look up a handle</label>
+      <input id="handle-input" name="handle" type="search" placeholder="Handle, e.g. rapid-kestrel-81" autocomplete="off" spellcheck="false">
+      <button type="submit">Profile</button>
+    </form>
+  </div>
+</header>
+<main id="app" aria-live="polite"></main>
+<footer class="pagefoot">
+  <p>Unofficial frontend. Live data from <a href="https://make.fun">make.fun</a>'s public API, read-only. No sign-in, no tracking.</p>
+</footer>
+</body>
+</html>
